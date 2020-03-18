@@ -1,41 +1,332 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div class="container">
+            <div class="section-title color-two text-center">
+                <h2 class="title wow pixFadeUp" style="visibility: visible; animation-name: pixFadeUp;">
+                    COVID-19 Situation Report
+                </h2>
+                <h4>{{date}}</h4>
+                <p class="wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                   
+                </p>
+            </div>
+            <!-- /.section-title -->
+
+             <h3 class="title wow pixFadeUp" style="visibility: visible; animation-name: pixFadeUp;">
+                    Sri Lanka
+                </h3>
+                <br>
+            <div class="countup-wrapper-two">
+                <div class="row no-gutters pricing-amount change-subs-duration">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-four wow pixFadeUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <div class="counter">
+                                <p>New Cases</p>
+                                <div class="local">
+                                    <h4 class="count" data-counter="15">15</h4>
+                                </div>
+                                <div class="global">
+                                    <h4 class="count">{{info.local_new_cases}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-two wow pixFadeUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-hospital-alt"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Total Cases</p>
+                                <div class="local">
+                                    <h4 class="count" data-counter="43"></h4>
+                                </div>
+                                <div class="global">
+                                    <h4 class="count">{{info.local_total_cases}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-three wow pixFadeUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Deaths</p>
+                              
+                                <div class="global">
+                                    <h4 class="count">{{info.local_new_deaths}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-five wow pixFadeUp" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-procedures"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Total Recovered</p>
+                             
+                                <div class="global">
+                                    <h4 class="count">{{info.local_recovered}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+
+                    
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+               <h3 class="title wow pixFadeUp" style="visibility: visible; animation-name: pixFadeUp;">
+                    World
+                </h3>
+                <br>
+            <div class="countup-wrapper-two">
+                <div class="row no-gutters pricing-amount change-subs-duration">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-four wow pixFadeUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                           
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <div class="counter">
+                                <p>New Cases</p>
+                            
+                                <div class="global">
+                                    <h4 class="count">{{info.global_new_cases}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-two wow pixFadeUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-hospital-alt"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Total Cases</p>
+                             
+                                <div class="global">
+                                    <h4 class="count">{{info.global_total_cases}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-three wow pixFadeUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Deaths</p>
+                              
+                                <div class="global">
+                                    <h4 class="count">{{info.global_deaths}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-five wow pixFadeUp" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-procedures"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Total Recovered</p>
+                             
+                                <div class="global">
+                                    <h4 class="count">{{info.global_recovered}}</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+
+               <h3 class="title wow pixFadeUp" style="visibility: visible; animation-name: pixFadeUp;">
+                    Death vs Recovered
+                </h3>
+                <br>
+            <div class="countup-wrapper-two">
+                <div class="row no-gutters pricing-amount change-subs-duration">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-four wow pixFadeUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Global Death Precentage</p>
+                            
+                                <div class="global">
+                                    <h4 class="count">{{gDeath}} %</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-two wow pixFadeUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-hospital-alt"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Global Recovered Precentage</p>
+                             
+                                <div class="global">
+                                    <h4 class="count">{{grecovered}} %</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-three wow pixFadeUp" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-bed"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Sri Lanka Death Precentage</p>
+                              
+                                <div class="global">
+                                    <h4 class="count">{{ldeath}} %</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="fun-fact-two color-five wow pixFadeUp" data-wow-delay="0.9s" style="visibility: visible; animation-delay: 0.9s; animation-name: pixFadeUp;">
+                            <div class="icon-container">
+                                <i class="fas fa-procedures"></i>
+                            </div>
+                            <div class="counter">
+                                <p>Global Recovered Precentage</p>
+                             
+                                <div class="global">
+                                    <h4 class="count">{{lrecovered}} %</h4>
+                                </div>
+                            </div>
+                            <!-- /.counter -->
+
+                        </div>
+                        <!-- /.fun-fact-two -->
+                    </div>
+                    <!-- /.col-lg-3 col-md-6 col-sm-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.countup-wrapper -->
+
+           
+        </div>
+    
+      
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  data () {
+    return {
+      info: {},
+      hospitals: {},
+      date: null,
+      gDeath: null,
+      grecovered: null,
+      ldeath: null,
+      lrecovered: null
+    }
+  },
+  mounted () {
+    this.getData(),
+    this.getDateTime()
+    this.getPrecentages()
+  },
+   methods: {
+     getData() {
+         axios.get("http://hpb.health.gov.lk/api/get-current-statistical").then(({ data }) => (
+  
+                     this.info = data.data,
+                     this.hospitals = data.data.hospital_data
+                   ));
+     },
+
+     getDateTime(){
+       this.date = new Date().toLocaleString()
+     },
+
+     getPrecentages(){
+       this.gDeath = ((this.info.global_deaths/this.info.global_total_cases) * 100).toFixed(2)
+       this.grecovered = ((this.info.global_recovered/this.info.global_total_cases) * 100).toFixed(2)
+       this.ldeath = ((this.info.local_deaths/this.info.local_total_cases) * 100).toFixed(2)
+       this.lrecovered = ((this.info.local_recovered/this.info.local_total_cases) * 100).toFixed(2)
+     }
+   },
+  created() {
+    this.interval = setInterval(() => this.getPrecentages(), 1000);
+    this.interval = setInterval(() => this.getData(), 70000);
+    this.interval = setInterval(() => this.getDateTime(), 1000);
+   },
+  
 }
 </script>
 
